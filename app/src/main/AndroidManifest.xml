@@ -13,25 +13,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".SplashScreen"
-            android:label="@string/title_activity_splash_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".MainActivity" />
 
         <uses-library
             android:name="com.google.android.wearable"
-            android:required="true" />
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
+            android:required="false" />
+        <!-- I set this ^ to false to allow my app to run on my hardware device. -->
+        <!-- Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run. -->
 
-        <activity android:name=".MainActivity">
+        <!-- After removing this block of code, my project was able to run
+        on my hardware device. -->
+        <meta-data
+        android:name="com.google.android.wearable.standalone"
+        android:value="false" />
+
+        <activity android:name=".SplashScreenActivity" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

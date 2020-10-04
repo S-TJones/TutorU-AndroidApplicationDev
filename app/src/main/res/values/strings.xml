@@ -17,6 +17,6 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="app_title">TutorU</string>
-    <string name="website_link">www.tutoru.com</string>
     <string name="logo_description">Logo of App</string>
+    <string name="place_holder">The Main Activity goes here.</string>
 </resources>
