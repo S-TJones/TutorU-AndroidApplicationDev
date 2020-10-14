@@ -33,4 +33,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="no_account_sign_up">Don\'t have an Account? Sign Up.</string>
+    <string name="add_topic">Adds a new Topic</string>
 </resources>

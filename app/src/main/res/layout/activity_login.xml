@@ -35,25 +35,23 @@
                 android:src="@drawable/bad_logo_background" />
 
             <EditText
-                android:id="@+id/password_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:autofillHints="@string/prompt_email"
-                android:drawableStart=""
-                android:hint="@string/prompt_password"
-                android:inputType="textPassword"
-                android:padding="10dp" />
-
-            <EditText
                 android:id="@+id/email_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:autofillHints="@string/prompt_email"
-                android:drawableStart=""
                 android:hint="@string/prompt_email"
                 android:inputType="textEmailAddress"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/password_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="@string/prompt_email"
+                android:hint="@string/prompt_password"
+                android:inputType="textPassword"
                 android:padding="10dp" />
 
             <TextView
@@ -66,6 +64,7 @@
                 android:layout_gravity="end"/>
 
             <Button
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_color"
