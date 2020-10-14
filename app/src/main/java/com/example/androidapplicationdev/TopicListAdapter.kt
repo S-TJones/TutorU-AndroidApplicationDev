@@ -12,7 +12,7 @@ class TopicListAdapter internal constructor(
 ) : RecyclerView.Adapter<TopicListAdapter.TopicViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var topics = emptyList<Topics>() // Cached copy of words
+    private var topics = emptyList<Topics>() // Cached copy of topics
 
     inner class TopicViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val topicItemView: TextView = itemView.findViewById(R.id.textView)
@@ -28,7 +28,7 @@ class TopicListAdapter internal constructor(
         holder.topicItemView.text = current.title
     }
 
-    internal fun setWords(topics: List<Topics>) {
+    internal fun setTopics(topics: List<Topics>) {
         this.topics = topics
         notifyDataSetChanged()
     }

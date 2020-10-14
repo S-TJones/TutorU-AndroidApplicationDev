@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
 @Dao
-interface TopicDAO {
+interface TopicDao {
 
     @Query("SELECT * from topic_table ORDER BY topic_name ASC")
     fun getAlphabetizedWords(): LiveData<List<Topics>>

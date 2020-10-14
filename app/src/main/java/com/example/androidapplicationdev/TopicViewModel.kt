@@ -14,11 +14,11 @@ class TopicViewModel(application: Application) : AndroidViewModel(application) {
     // - We can put an observer on the data (instead of polling for changes) and only update the
     //   the UI when the data actually changes.
     // - Repository is completely separated from the UI through the ViewModel.
-    private val allTopics: LiveData<List<Topics>>
+    val allTopics: LiveData<List<Topics>>
 
     init {
-        val topicDao = TopicRoomDatabase.getDatabase(application).topicDao()
-        repository = TopicRepository(topicDao)
+        val topicsDao = TopicRoomDatabase.getDatabase(application, viewModelScope).topicDao()
+        repository = TopicRepository(topicsDao)
         allTopics = repository.allWords
     }
 

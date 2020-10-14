@@ -34,4 +34,8 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="no_account_sign_up">Don\'t have an Account? Sign Up.</string>
     <string name="add_topic">Adds a new Topic</string>
+
+    <string name="hint_topic">Topic…</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Topic not saved because it is empty.</string>
 </resources>
