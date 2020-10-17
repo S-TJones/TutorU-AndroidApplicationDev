@@ -2,15 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/sidebar_item1"
-        android:title="Item 1!" />
+        android:id="@+id/sidebar_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
 
     <item
-        android:id="@+id/sidebar_item2"
-        android:title="Item 2!" />
+        android:id="@+id/sidebar_account"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Account" />
 
     <item
-        android:id="@+id/sidebar_item3"
-        android:title="Item 3!" />
+        android:id="@+id/sidebar_progress"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="Progress" />
+
+    <item
+        android:id="@+id/sidebar_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
 
 </menu>

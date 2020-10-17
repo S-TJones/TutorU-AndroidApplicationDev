@@ -37,14 +37,17 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener{
             when(it.itemId){
-                R.id.sidebar_item1 -> Toast.makeText(applicationContext,
-                "Clicked Item 1", Toast.LENGTH_SHORT).show()
+                R.id.sidebar_home -> Toast.makeText(applicationContext,
+                "Clicked Home", Toast.LENGTH_SHORT).show()
 
-                R.id.sidebar_item2 -> Toast.makeText(applicationContext,
-                    "Clicked Item 2", Toast.LENGTH_SHORT).show()
+                R.id.sidebar_account -> Toast.makeText(applicationContext,
+                    "Clicked Account", Toast.LENGTH_SHORT).show()
 
-                R.id.sidebar_item3 -> Toast.makeText(applicationContext,
-                    "Clicked Item 3", Toast.LENGTH_SHORT).show()
+                R.id.sidebar_progress -> Toast.makeText(applicationContext,
+                    "Clicked Progress", Toast.LENGTH_SHORT).show()
+
+                R.id.sidebar_settings -> Toast.makeText(applicationContext,
+                    "Clicked Settings", Toast.LENGTH_SHORT).show()
             }
             true
         }
