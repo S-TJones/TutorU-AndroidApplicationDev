@@ -4,7 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_main.*
 import java.sql.Time
 
 class MainActivity : AppCompatActivity() {
@@ -20,9 +23,31 @@ class MainActivity : AppCompatActivity() {
     private lateinit var topicViewModel: TopicViewModel
     private val newTopicActivityRequestCode = 1
 
+    private lateinit var toggle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener{
+            when(it.itemId){
+                R.id.sidebar_item1 -> Toast.makeText(applicationContext,
+                "Clicked Item 1", Toast.LENGTH_SHORT).show()
+
+                R.id.sidebar_item2 -> Toast.makeText(applicationContext,
+                    "Clicked Item 2", Toast.LENGTH_SHORT).show()
+
+                R.id.sidebar_item3 -> Toast.makeText(applicationContext,
+                    "Clicked Item 3", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
 
         // Adds the RecyclerView
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
@@ -56,6 +81,13 @@ class MainActivity : AppCompatActivity() {
                 R.string.empty_not_saved,
                 Toast.LENGTH_LONG).show()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
 

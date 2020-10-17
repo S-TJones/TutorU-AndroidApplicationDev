@@ -38,4 +38,9 @@
     <string name="hint_topic">Topic…</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Topic not saved because it is empty.</string>
+    <string name="topic_header">Your Topics</string>
+
+    <string name="nav_home">HOME</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
