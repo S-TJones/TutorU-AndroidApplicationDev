@@ -1,4 +1,4 @@
-package com.example.androidapplicationdev
+package com.example.androidapplicationdev.topics
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.androidapplicationdev.R
 
 class TopicListAdapter internal constructor(
     context: Context

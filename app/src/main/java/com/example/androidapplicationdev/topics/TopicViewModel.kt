@@ -1,4 +1,4 @@
-package com.example.androidapplicationdev
+package com.example.androidapplicationdev.topics
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

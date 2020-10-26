@@ -1,4 +1,4 @@
-package com.example.androidapplicationdev
+package com.example.androidapplicationdev.topics
 
 import androidx.lifecycle.LiveData
 

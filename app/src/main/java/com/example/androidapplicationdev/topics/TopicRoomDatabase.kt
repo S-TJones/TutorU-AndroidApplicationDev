@@ -1,4 +1,4 @@
-package com.example.androidapplicationdev
+package com.example.androidapplicationdev.topics
 
 import android.content.Context
 import androidx.room.Database

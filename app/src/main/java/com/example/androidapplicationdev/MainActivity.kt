@@ -11,12 +11,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import com.example.androidapplicationdev.topics.NewTopicActivity
+import com.example.androidapplicationdev.topics.TopicListAdapter
+import com.example.androidapplicationdev.topics.TopicViewModel
+import com.example.androidapplicationdev.topics.Topics
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
-import java.sql.Time
 
 class MainActivity : AppCompatActivity() {
 
@@ -93,14 +93,3 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 }
-
-@Entity(tableName = "topic_table")
-data class Topics(
-
-    @PrimaryKey(autoGenerate = true)    val id: Int,
-    @ColumnInfo(name = "topic_name")    val title: String,
-    @ColumnInfo(name = "days")          val days: String?,
-    @ColumnInfo(name = "time_start")    val time: String?,
-    @ColumnInfo(name = "level")         val level: Int?,
-    @ColumnInfo(name = "duration")      val length: Int
-)
